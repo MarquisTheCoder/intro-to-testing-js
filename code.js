@@ -14,3 +14,13 @@ const sayHello = function(name){
 
 const isFive = (number) => number == 5
 // alert(sayHello(false));
+const isEven = number => (number % 2 === 0 && number !== true && number != false) ? true : false;
+const isVowel = function(character){
+
+    if(typeof character === 'string'){
+        if(['a','e','i','o','u'].includes(character.toLowerCase())){
+            return true;
+        }
+    }
+    return false
+}

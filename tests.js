@@ -43,3 +43,60 @@ describe('isFive', function (){
         expect(isFive("5")).toBe(true)
     })
 })
+
+describe('isEven', function(){
+    it('should be a function type', function(){
+        expect(typeof isEven).toBe('function')
+    })
+    it('should return true if given a value of 2', function(){
+        expect(isEven(2)).toBe(true)
+    })
+    it('should return true if -4 is passed', function(){
+        expect(isEven(-4)).toBe(true)
+    })
+    it('should return false if 3 is passed', function(){
+        expect(isEven(3)).toBe(false)
+    })
+    it('should return false if "bananna" is passed', function (){
+        expect(isEven("bananna")).toBe(false)
+    })
+    it('should return true if 8 is passed', function(){
+        expect(isEven(8)).toBe(true)
+    })
+    it('should return false if Infinity is passed', function(){
+        expect(isEven(Infinity)).toBe(false)
+    })
+    it('should return false if true/false is passed', function(){
+        expect(isEven(true) || isEven(false)).toBe(false)
+    })
+    it('should return false if null is passed', function () {
+        expect(isEven()).toBe(false)
+    });
+})
+
+describe('isVowel', function(){
+    it('should be a defined function', function(){
+        expect(typeof isVowel).toBe('function')
+    })
+    it('should return a boolean', function(){
+        expect(typeof  isVowel()).toBe('boolean')
+    })
+    it('should return true if A is passed', function () {
+        expect(isVowel('A')).toBe(true)
+    });
+    it('should return true if a is passed', function () {
+        expect(isVowel('a')).toBe(true)
+    });
+    it('should return false if y is passed', function () {
+        expect(isVowel('y')).toBe(false)
+    });
+    it('should return false if true/false is used', function () {
+        expect(isVowel(true) || isVowel(false)).toBe(false)
+    });
+    it('should return false if banana is passed', function () {
+        expect(isVowel('banana')).toBe(false)
+    });
+    it('should return false if value is null', function () {
+        expect(isVowel()).toBe(false)
+    });
+})
