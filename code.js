@@ -2,6 +2,8 @@
 
 const helloWorld = () => 'Hello, World!'
 
-const sayHello = function(){
-    return('Hello');
+const sayHello = function(name){
+    return(`Hello, ${name}!`);
 }
+sayHello('Jane');
+sayHello('Alex');
