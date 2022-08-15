@@ -15,6 +15,7 @@ const sayHello = function(name){
 const isFive = (number) => number == 5
 // alert(sayHello(false));
 const isEven = number => (number % 2 === 0 && number !== true && number != false) ? true : false;
+
 const isVowel = function(character){
 
     if(typeof character === 'string'){
@@ -24,3 +25,8 @@ const isVowel = function(character){
     }
     return false
 }
+
+const add = function(valueOne, valueTwo){
+    return(Number(valueOne) + Number(valueTwo))
+}
+

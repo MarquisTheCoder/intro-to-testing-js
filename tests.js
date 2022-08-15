@@ -99,4 +99,32 @@ describe('isVowel', function(){
     it('should return false if value is null', function () {
         expect(isVowel()).toBe(false)
     });
+
+})
+
+describe('add', function (){
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function')
+    });
+    it('should return 5 if 2 and 3 are passed', function () {
+        expect(add(3,2)).toBe(5);
+    });
+    it('should return -12 if -3 and -9 are passed', function () {
+        expect(add(-3, -9)).toBe(-12)
+    });
+    it('should should return 11 if string 5 and 6 are passed', function () {
+        expect(add('5', 6)).toBe(11)
+    });
+    it('should return 6 if string -4 and str 10', function () {
+        expect(add('-4','10')).toBe(6)
+    });
+    it('should return NaN if banana and split are passed', function () {
+        expect(isNaN(add('banana', 'split')))
+    });
+    it('should return NaN if 2 and apples are passed', function () {
+        expect(isNaN(add(2, 'apples')))
+    });
+    it('should return NaN if nothing is passed', function () {
+        expect(isNaN(add()))
+    });
 })
