@@ -12,4 +12,5 @@ const sayHello = function(name){
     return(`Hello, ${name}!`);
 }
 
-alert(sayHello(false));
+const isFive = (number) => number == 5
+// alert(sayHello(false));

@@ -31,3 +31,15 @@ describe('sayHello', function(){
         expect(sayHello(null)).toBe("not accepted")
     })
 })
+
+describe('isFive', function (){
+    it('should be of type function', function (){
+        expect(typeof isFive).toBe('function')
+    })
+    it('should return a type boolean', function(){
+        expect(typeof isFive()).toBe('boolean')
+    })
+    it('should accept "5" as an input', function(){
+        expect(isFive("5")).toBe(true)
+    })
+})
