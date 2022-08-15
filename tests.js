@@ -21,14 +21,13 @@ describe('sayHello', function(){
     it('should return a string when it is called', function(){
         expect(typeof sayHello()).toBe('string')
     })
-    it(`should return "Hello, Jane!"`, function(){
-        expect(sayHello("Jane")).toBe('Hello, Jane!')
+    it(`should return "Hello, {argument}`, function(){
+        expect(sayHello(name)).toBe(`Hello, ${name}!`)
     })
-    it('should return "Hello, Alex!"', function(){
-        expect(sayHello('Alex')).toBe('Hello, Alex!')
+    it('should ignore any true/false statements', function(){
+        expect(sayHello(false) || sayHello(true)).toBe('Hello, World!')
     })
-
-    it('should return "Hello, Pat', function(){
-        expect(sayHello('Pat')).toBe("Hello, Pat!")
+    it('should return "not accepted" if null', function(){
+        expect(sayHello(null)).toBe("not accepted")
     })
 })
